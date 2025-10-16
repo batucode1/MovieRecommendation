@@ -1,0 +1,17 @@
+# requirements.txt
+
+# Veri işleme için
+pandas
+langchain-chroma
+langchain-community
+langchain
+langchainhub
+langgraph
+langchain-openai
+# Vektör veritabanı (ChromaDB)
+chromadb
+# Metinleri vektöre çevirmek için
+sentence-transformers
+torch
+# API anahtarını yönetmek için
+python-dotenv
