@@ -1,6 +1,6 @@
 import pandas as pd
 from langchain_community.vectorstores import Chroma
-from app.config import movies_file
+from .config import movies_file, embedding
 from langchain_huggingface import HuggingFaceEmbeddings
 
 
@@ -48,11 +48,6 @@ moviesDf = pd.read_csv(movies_file)
 
 # döküman oluşturuluyor
 document = moviesDf.apply(createFilmDocument, axis=1).tolist()
-
-# verileri sayısal verilere dönüştürecek huggingface modeli hazırlandı
-embedding_model = "sentence-transformers/paraphrase-multilingual-mpnet-base-v2"
-embedding = HuggingFaceEmbeddings(model_name=embedding_model)
-
 # veriler ve sayısal karşılıkları vectorstorea kaydedildi chrome vectordb ile
 vectorstore = Chroma.from_texts(
     texts=document,

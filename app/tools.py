@@ -1,5 +1,5 @@
 from langchain_core.tools import tool
-from app.vector_store import retriever
+from .vector_store import retriever
 
 
 @tool

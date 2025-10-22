@@ -1,6 +1,6 @@
 from langgraph.prebuilt import create_react_agent
-from app.config import model
-from tools import retrieve_movie_context
+from .config import model
+from .tools import retrieve_movie_context
 
 SYSTEM_PROMPT = (
     "Sen filmler hakkında bilgi veren yardımcı bir asistansın. "
@@ -10,7 +10,6 @@ SYSTEM_PROMPT = (
     "Eğer araçtan gelen bilgide cevap yoksa, 'Üzgünüm, bu bilgi veritabanımda bulunmuyor.' de."
     "Cevaplarını her zaman Türkçe ver."
 )
-
 
 def create_agent():
     tool = [retrieve_movie_context]
