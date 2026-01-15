@@ -1,5 +1,5 @@
 
-# 🎬 MovieRAG — Getting Started (External Users)
+#  MovieRAG — Getting Started (External Users)
 
 This guide explains **exactly** how to run the MovieRAG project on a fresh machine — no prior context required.
 
